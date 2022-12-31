@@ -1,0 +1,17 @@
+<div class="form">
+    <div class="formCon">
+        <label class="form-label">Course Name:</label>
+        <input #courseName type="text" (keyup)="onSubmitCourseName(courseName.value)">
+    </div>
+    <div class="formCon">
+        <label class="form-label">Number of Holes:</label>
+        <input #numberOfHoles type="number" min="1" max="18" (change)="onCreateTable(numberOfHoles.value)">
+    </div>
+</div>
+<app-table 
+    *ngIf="createdTable"
+    [holes] = "holes"
+></app-table>
+<div *ngIf="createdTable" class="btnCon">
+    <button type="button" (click)="reset(); numberOfHoles.value = '1'">reset</button>
+</div>

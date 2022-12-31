@@ -1,0 +1,77 @@
+h1,h2,h3,h4,h5,h6,p{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    margin-top: 1.5rem;
+    text-align: center;
+    text-shadow: 1px 2px 3px #808080;
+}
+
+.tableCon{
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+    width: 100%;
+}
+
+table{
+    width: 90%;
+    font-size: 25px;
+    background:rgba(255, 255, 255, 0.4);
+    width: max-content;
+}
+
+td, th, span td, span th{
+    border: .3px solid #333;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+}
+
+thead{
+    background-color: #333;
+    color: #fff;
+}
+
+button {
+    width: 100%;
+    height: 100%;
+    font-size: 25px;
+    box-shadow: rgba(0, 0, 0, 0.3) 8px 8px 8px;
+}
+
+button:hover {
+    background-color: #cfd8dc;
+}
+
+.nameInput{
+    border: none;
+    background-color: transparent;
+    width: 160px;
+    height: 100%;
+    font-size: 25px;
+    padding: 0;
+}
+
+.numInput{
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    text-align: right;
+}
+
+.nameInput:focus {
+    outline: #336699 auto .5px;
+}
+
+input[type="number"]::-webkit-outer-spin-button, 
+input[type="number"]::-webkit-inner-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.diagonalLine{
+    background-image: linear-gradient(to right top, transparent calc(50% - 0.5px), #333 50%, #333 calc(50% + 0.5px), transparent calc(50% + 1px));
+}

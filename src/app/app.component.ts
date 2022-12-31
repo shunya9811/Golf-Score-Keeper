@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Golf-score-keeper';
+  title = 'Golf Score Keeper';
+  course: string = "";
+
+  addCourseName(input: string) {
+    this.course = input;
+  }
+
+  displayTitle() {
+    return this.course == "" ? this.title: this.title + " For " + this.course;
+  }
 }

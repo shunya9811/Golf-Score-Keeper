@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+body{
+    margin: 0;
+    background-image: url("https://cdn.pixabay.com/photo/2016/11/22/22/39/golf-1850984_960_720.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 8%;
+    z-index: 0;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    bottom: -5px;
+    left: -5px;
+    right: -5px;
+    background: inherit;
+    filter: blur(10px);
+    /* position:absoluteのせいで最前面に来てしまうため */
+    z-index: -1;
+}

@@ -1,0 +1,61 @@
+<div class="tableCon">
+    <table>
+        <thead>
+            <tr>
+                <th style="width: '160px';">Hole Number</th>
+                <span *ngFor="let num of header">
+                    <th>{{num}}</th>
+                </span>
+                <th style="width: '60px';">Total</th>
+                <th style="width: '160px';">Under/Over Par</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!--パー列-->
+            <tr>
+                <td>Par For Hole</td>
+                <span *ngFor="let td of row; let i = index">
+                    <td><input type="number" class="numInput" min="1" value="{{td}}" (keyup)="setParNum($event.target, i)"></td>
+                </span>
+                
+                <td style="text-align: right;">{{parForHole.calculateTotal()}}</td>
+                <td style="text-align: right;">0</td>
+            </tr>
+            <!--空列-->
+            <tr>
+                <td class="diagonalLine"> </td>
+                <span *ngFor="let td of row">
+                    <td>{{td}}</td>
+                </span>
+                
+                <td> </td>
+                <td> </td>
+            </tr>
+            <!--プレイヤー列-->
+            <tr *ngFor="let player of players; let i = index">
+                <td>
+                    <input type="text" class="nameInput" placeholder="Player Name" (keyup)="setPlayerName($event.target, i)">
+                </td>
+                <span *ngFor="let td of row; let j = index">
+                    <td [style.background-color]="checkScore(i, j)">
+                        <input type="number" class="numInput" min="1" value="{{td}}" (keyup)="setPlayerNum($event.target, i, j)">
+                    </td>
+                </span>
+                <td style="text-align: right;">{{player.calculateTotal()}}</td>
+                <td style="text-align: right;">{{getResult(i)}}</td>
+            </tr>
+            <!--追加列-->
+            <tr>
+                <td>
+                    <button type="button" (click)="onAddPlayer()">Add Player +</button>
+                </td>
+                <span *ngFor="let td of row">
+                    <td>{{td}}</td>
+                </span>
+                
+                <td> </td>
+                <td> </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

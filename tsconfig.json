@@ -22,7 +22,8 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "strictPropertyInitialization": false, // 変数定義時に初期化されていなくても良いように変更
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
