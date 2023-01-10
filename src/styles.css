@@ -1,5 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-/* You can add global styles to this file, and also import other style files */
 body{
     margin: 0;
     background-image: url("https://cdn.pixabay.com/photo/2016/11/22/22/39/golf-1850984_960_720.jpg");
@@ -13,9 +12,9 @@ body::before {
     content: '';
     position: absolute;
     top: -5px;
-    bottom: -5px;
+    right: -5px;  
+    bottom: -400px;
     left: -5px;
-    right: -5px;
     background: inherit;
     filter: blur(10px);
     /* position:absoluteのせいで最前面に来てしまうため */
